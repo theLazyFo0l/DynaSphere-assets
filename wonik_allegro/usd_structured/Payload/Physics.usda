@@ -1,0 +1,960 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "MuJoCo USD Converter v0.5.0"
+    }
+    defaultPrim = "allegro_left"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "allegro_left"
+{
+    def Scope "Physics"
+    {
+        def Material "PhysicsMaterial" (
+            prepend apiSchemas = ["PhysicsMaterialAPI", "DynaSphereMaterialAPI"]
+        )
+        {
+            float dynasphere:contactDamping = 100
+            float dynasphere:contactStiffness = 2500
+            float dynasphere:rollingFriction = 0.0001
+            float dynasphere:torsionalFriction = 0.005
+            float physics:dynamicFriction = 1
+            float physics:staticFriction = 1
+        }
+
+        def MjcActuator "ffa0"
+        {
+            uniform double[] mjc:biasPrm = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:ctrlRange:max = 0.47
+            uniform double mjc:ctrlRange:min = -0.47
+            rel mjc:target = </allegro_left/Geometry/palm/ff_base/ffj0>
+        }
+
+        def MjcActuator "ffa1"
+        {
+            uniform double[] mjc:biasPrm = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:ctrlRange:max = 1.61
+            uniform double mjc:ctrlRange:min = -0.196
+            rel mjc:target = </allegro_left/Geometry/palm/ff_base/ff_proximal/ffj1>
+        }
+
+        def MjcActuator "ffa2"
+        {
+            uniform double[] mjc:biasPrm = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:ctrlRange:max = 1.709
+            uniform double mjc:ctrlRange:min = -0.174
+            rel mjc:target = </allegro_left/Geometry/palm/ff_base/ff_proximal/ff_medial/ffj2>
+        }
+
+        def MjcActuator "ffa3"
+        {
+            uniform double[] mjc:biasPrm = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:ctrlRange:max = 1.618
+            uniform double mjc:ctrlRange:min = -0.227
+            rel mjc:target = </allegro_left/Geometry/palm/ff_base/ff_proximal/ff_medial/ff_distal/ffj3>
+        }
+
+        def MjcActuator "mfa0"
+        {
+            uniform double[] mjc:biasPrm = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:ctrlRange:max = 0.47
+            uniform double mjc:ctrlRange:min = -0.47
+            rel mjc:target = </allegro_left/Geometry/palm/mf_base/mfj0>
+        }
+
+        def MjcActuator "mfa1"
+        {
+            uniform double[] mjc:biasPrm = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:ctrlRange:max = 1.61
+            uniform double mjc:ctrlRange:min = -0.196
+            rel mjc:target = </allegro_left/Geometry/palm/mf_base/mf_proximal/mfj1>
+        }
+
+        def MjcActuator "mfa2"
+        {
+            uniform double[] mjc:biasPrm = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:ctrlRange:max = 1.709
+            uniform double mjc:ctrlRange:min = -0.174
+            rel mjc:target = </allegro_left/Geometry/palm/mf_base/mf_proximal/mf_medial/mfj2>
+        }
+
+        def MjcActuator "mfa3"
+        {
+            uniform double[] mjc:biasPrm = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:ctrlRange:max = 1.618
+            uniform double mjc:ctrlRange:min = -0.227
+            rel mjc:target = </allegro_left/Geometry/palm/mf_base/mf_proximal/mf_medial/mf_distal/mfj3>
+        }
+
+        def MjcActuator "rfa0"
+        {
+            uniform double[] mjc:biasPrm = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:ctrlRange:max = 0.47
+            uniform double mjc:ctrlRange:min = -0.47
+            rel mjc:target = </allegro_left/Geometry/palm/rf_base/rfj0>
+        }
+
+        def MjcActuator "rfa1"
+        {
+            uniform double[] mjc:biasPrm = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:ctrlRange:max = 1.61
+            uniform double mjc:ctrlRange:min = -0.196
+            rel mjc:target = </allegro_left/Geometry/palm/rf_base/rf_proximal/rfj1>
+        }
+
+        def MjcActuator "rfa2"
+        {
+            uniform double[] mjc:biasPrm = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:ctrlRange:max = 1.709
+            uniform double mjc:ctrlRange:min = -0.174
+            rel mjc:target = </allegro_left/Geometry/palm/rf_base/rf_proximal/rf_medial/rfj2>
+        }
+
+        def MjcActuator "rfa3"
+        {
+            uniform double[] mjc:biasPrm = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:ctrlRange:max = 1.618
+            uniform double mjc:ctrlRange:min = -0.227
+            rel mjc:target = </allegro_left/Geometry/palm/rf_base/rf_proximal/rf_medial/rf_distal/rfj3>
+        }
+
+        def MjcActuator "tha0"
+        {
+            uniform double[] mjc:biasPrm = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:ctrlRange:max = 1.396
+            uniform double mjc:ctrlRange:min = 0.263
+            rel mjc:target = </allegro_left/Geometry/palm/th_base/thj0>
+        }
+
+        def MjcActuator "tha1"
+        {
+            uniform double[] mjc:biasPrm = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:ctrlRange:max = 1.163
+            uniform double mjc:ctrlRange:min = -0.105
+            rel mjc:target = </allegro_left/Geometry/palm/th_base/th_proximal/thj1>
+        }
+
+        def MjcActuator "tha2"
+        {
+            uniform double[] mjc:biasPrm = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:ctrlRange:max = 1.644
+            uniform double mjc:ctrlRange:min = -0.189
+            rel mjc:target = </allegro_left/Geometry/palm/th_base/th_proximal/th_medial/thj2>
+        }
+
+        def MjcActuator "tha3"
+        {
+            uniform double[] mjc:biasPrm = [0, -1, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:ctrlRange:max = 1.719
+            uniform double mjc:ctrlRange:min = -0.162
+            rel mjc:target = </allegro_left/Geometry/palm/th_base/th_proximal/th_medial/th_distal/thj3>
+        }
+    }
+
+    def "Geometry"
+    {
+        def "palm" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "PhysicsArticulationRootAPI", "DynaSphereArticulationRootAPI", "PhysicsFilteredPairsAPI"]
+        )
+        {
+            uniform bool dynasphere:jointsAddMobility = 1
+            point3f physics:centerOfMass = (-0.008981602, 0.0039536464, -0.040257327)
+            float3 physics:diagonalInertia = (0.0004481273, 0.0003009822, 0.00024373832)
+            prepend rel physics:filteredPairs = [
+                </allegro_left/Geometry/palm/ff_base>,
+                </allegro_left/Geometry/palm/mf_base>,
+                </allegro_left/Geometry/palm/rf_base>,
+                </allegro_left/Geometry/palm/th_base>,
+                </allegro_left/Geometry/palm/th_base/th_proximal>,
+            ]
+            float physics:mass = 0.35158747
+            quatf physics:principalAxes = (0.47207236, -0.8815445, 0.0031277959, 0.0041546463)
+
+            over "Box" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+            )
+            {
+                rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                uniform int mjc:group = 3
+                uniform double[] mjc:solref = [0.02, 1]
+                float dynasphere:contactGap = 0
+                float physics:mass = 0
+            }
+
+            def PhysicsFixedJoint "PhysicsFixedJoint"
+            {
+                rel physics:body0 = </allegro_left>
+                rel physics:body1 = </allegro_left/Geometry/palm>
+                point3f physics:localPos0 = (0, 0, 0)
+                point3f physics:localPos1 = (0, 0, 0)
+                quatf physics:localRot0 = (6.123234e-17, 0.70710677, 4.5986944e-17, 0.70710677)
+                quatf physics:localRot1 = (1, 0, 0, 0)
+            }
+
+            def "rf_base" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-0.00077812717, -0.000010286743, 0.008282494)
+                float3 physics:diagonalInertia = (7.653764e-7, 6.8884293e-7, 3.5504598e-7)
+                float physics:mass = 0.0072320164
+                quatf physics:principalAxes = (0.68420887, 0.68586165, -0.17507692, 0.17549984)
+
+                over "Box" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                    uniform int mjc:group = 3
+                    uniform double[] mjc:solref = [0.02, 1]
+                    float dynasphere:contactGap = 0
+                    float physics:mass = 0
+                }
+
+                def PhysicsRevoluteJoint "rfj0" (
+                    prepend apiSchemas = ["MjcJointAPI", "DynaSphereJointAPI"]
+                )
+                {
+                    uniform double mjc:damping = 0.1
+                    float dynasphere:damping = 0.0017453292
+                    uniform token physics:axis = "Z"
+                    rel physics:body0 = </allegro_left/Geometry/palm>
+                    rel physics:body1 = </allegro_left/Geometry/palm/rf_base>
+                    point3f physics:localPos0 = (-1.540744e-33, 0.0435, -0.001542)
+                    point3f physics:localPos1 = (0, 0, 0)
+                    quatf physics:localRot0 = (0.99904823, -0.043619126, -3.307005e-18, 6.591949e-17)
+                    quatf physics:localRot1 = (1, 0, 0, 0)
+                    float physics:lowerLimit = -26.929016
+                    float physics:upperLimit = 26.929016
+                }
+
+                def "rf_proximal" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (2.7523313e-8, -0.00009059554, 0.02699977)
+                    float3 physics:diagonalInertia = (0.000011862359, 0.000011276808, 0.0000022658685)
+                    float physics:mass = 0.027276123
+                    quatf physics:principalAxes = (1, 0, 0, 0)
+
+                    over "Box" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                        uniform int mjc:group = 3
+                        uniform double[] mjc:solref = [0.02, 1]
+                        float dynasphere:contactGap = 0
+                        float physics:mass = 0
+                    }
+
+                    def PhysicsRevoluteJoint "rfj1" (
+                        prepend apiSchemas = ["MjcJointAPI", "DynaSphereJointAPI"]
+                    )
+                    {
+                        uniform double mjc:damping = 0.1
+                        float dynasphere:damping = 0.0017453292
+                        uniform token physics:axis = "Y"
+                        rel physics:body0 = </allegro_left/Geometry/palm/rf_base>
+                        rel physics:body1 = </allegro_left/Geometry/palm/rf_base/rf_proximal>
+                        point3f physics:localPos0 = (-1.155558e-33, 0, 0.0164)
+                        point3f physics:localPos1 = (0, 0, 0)
+                        quatf physics:localRot0 = (1, 0, 0, 0)
+                        quatf physics:localRot1 = (1, 0, 0, 0)
+                        float physics:lowerLimit = -11.229973
+                        float physics:upperLimit = 92.24621
+                    }
+
+                    def "rf_medial" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (-0.00019288158, -0.000077904166, 0.022586012)
+                        float3 physics:diagonalInertia = (0.0000042873276, 0.0000036356423, 0.0000016736698)
+                        float physics:mass = 0.018463746
+                        quatf physics:principalAxes = (0.999903, -0.00028931772, 0.013923432, 0.0000040286864)
+
+                        over "Box" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                            uniform int mjc:group = 3
+                            uniform double[] mjc:solref = [0.02, 1]
+                            float dynasphere:contactGap = 0
+                            float physics:mass = 0
+                        }
+
+                        def PhysicsRevoluteJoint "rfj2" (
+                            prepend apiSchemas = ["MjcJointAPI", "DynaSphereJointAPI"]
+                        )
+                        {
+                            uniform double mjc:damping = 0.1
+                            float dynasphere:damping = 0.0017453292
+                            uniform token physics:axis = "Y"
+                            rel physics:body0 = </allegro_left/Geometry/palm/rf_base/rf_proximal>
+                            rel physics:body1 = </allegro_left/Geometry/palm/rf_base/rf_proximal/rf_medial>
+                            point3f physics:localPos0 = (-2.311116e-33, 6.938894e-18, 0.054)
+                            point3f physics:localPos1 = (0, 0, 0)
+                            quatf physics:localRot0 = (1, 0, 0, 0)
+                            quatf physics:localRot1 = (1, 0, 0, 0)
+                            float physics:lowerLimit = -9.969465
+                            float physics:upperLimit = 97.91849
+                        }
+
+                        def "rf_distal" (
+                            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                        )
+                        {
+                            point3f physics:centerOfMass = (-0.0005208062, -0.0000033249908, 0.0072512897)
+                            float3 physics:diagonalInertia = (7.9637954e-7, 7.281658e-7, 3.7775212e-7)
+                            float physics:mass = 0.007512312
+                            quatf physics:principalAxes = (0.68773526, 0.68773526, 0.16437826, -0.16437826)
+
+                            over "Box" (
+                                prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                                uniform int mjc:group = 3
+                                uniform double[] mjc:solref = [0.02, 1]
+                                float dynasphere:contactGap = 0
+                                float physics:mass = 0
+                            }
+
+                            def PhysicsRevoluteJoint "rfj3" (
+                                prepend apiSchemas = ["MjcJointAPI", "DynaSphereJointAPI"]
+                            )
+                            {
+                                uniform double mjc:damping = 0.1
+                                float dynasphere:damping = 0.0017453292
+                                uniform token physics:axis = "Y"
+                                rel physics:body0 = </allegro_left/Geometry/palm/rf_base/rf_proximal/rf_medial>
+                                rel physics:body1 = </allegro_left/Geometry/palm/rf_base/rf_proximal/rf_medial/rf_distal>
+                                point3f physics:localPos0 = (-3.85186e-33, 6.938894e-18, 0.0384)
+                                point3f physics:localPos1 = (0, 0, 0)
+                                quatf physics:localRot0 = (1, 0, 0, 0)
+                                quatf physics:localRot1 = (1, 0, 0, 0)
+                                float physics:lowerLimit = -13.006142
+                                float physics:upperLimit = 92.704575
+                            }
+
+                            def "rf_tip" (
+                                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                            )
+                            {
+                                point3f physics:centerOfMass = (7.276306e-12, -1.1560279e-7, 0.025402764)
+                                float3 physics:diagonalInertia = (4.5582306e-7, 4.558136e-7, 4.4955877e-7)
+                                float physics:mass = 0.0068445215
+                                quatf physics:principalAxes = (1, 0, 0, 0)
+
+                                over "Capsule" (
+                                    prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                                    uniform int mjc:group = 3
+                                    uniform double[] mjc:solref = [0.02, 1]
+                                    float dynasphere:contactGap = 0
+                                    float physics:mass = 0
+                                }
+
+                                def PhysicsFixedJoint "PhysicsFixedJoint"
+                                {
+                                    rel physics:body0 = </allegro_left/Geometry/palm/rf_base/rf_proximal/rf_medial/rf_distal>
+                                    rel physics:body1 = </allegro_left/Geometry/palm/rf_base/rf_proximal/rf_medial/rf_distal/rf_tip>
+                                    point3f physics:localPos0 = (-7.70372e-34, 6.938894e-18, 0)
+                                    point3f physics:localPos1 = (0, 0, 0)
+                                    quatf physics:localRot0 = (1, 0, 0, 0)
+                                    quatf physics:localRot1 = (1, 0, 0, 0)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            def "mf_base" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-0.00077812717, -0.000010286743, 0.008282494)
+                float3 physics:diagonalInertia = (7.653764e-7, 6.8884293e-7, 3.5504598e-7)
+                float physics:mass = 0.0072320164
+                quatf physics:principalAxes = (0.68420887, 0.68586165, -0.17507692, 0.17549984)
+
+                over "Box" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                    uniform int mjc:group = 3
+                    uniform double[] mjc:solref = [0.02, 1]
+                    float dynasphere:contactGap = 0
+                    float physics:mass = 0
+                }
+
+                def PhysicsRevoluteJoint "mfj0" (
+                    prepend apiSchemas = ["MjcJointAPI", "DynaSphereJointAPI"]
+                )
+                {
+                    uniform double mjc:damping = 0.1
+                    float dynasphere:damping = 0.0017453292
+                    uniform token physics:axis = "Z"
+                    rel physics:body0 = </allegro_left/Geometry/palm>
+                    rel physics:body1 = </allegro_left/Geometry/palm/mf_base>
+                    point3f physics:localPos0 = (-2.4074124e-35, -4.5833056e-37, 0.0007)
+                    point3f physics:localPos1 = (0, 0, 0)
+                    quatf physics:localRot0 = (1, 0, 0, 0)
+                    quatf physics:localRot1 = (1, 0, 0, 0)
+                    float physics:lowerLimit = -26.929016
+                    float physics:upperLimit = 26.929016
+                }
+
+                def "mf_proximal" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (2.7523313e-8, -0.00009059554, 0.02699977)
+                    float3 physics:diagonalInertia = (0.000011862359, 0.000011276808, 0.0000022658685)
+                    float physics:mass = 0.027276123
+                    quatf physics:principalAxes = (1, 0, 0, 0)
+
+                    over "Box" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                        uniform int mjc:group = 3
+                        uniform double[] mjc:solref = [0.02, 1]
+                        float dynasphere:contactGap = 0
+                        float physics:mass = 0
+                    }
+
+                    def PhysicsRevoluteJoint "mfj1" (
+                        prepend apiSchemas = ["MjcJointAPI", "DynaSphereJointAPI"]
+                    )
+                    {
+                        uniform double mjc:damping = 0.1
+                        float dynasphere:damping = 0.0017453292
+                        uniform token physics:axis = "Y"
+                        rel physics:body0 = </allegro_left/Geometry/palm/mf_base>
+                        rel physics:body1 = </allegro_left/Geometry/palm/mf_base/mf_proximal>
+                        point3f physics:localPos0 = (0, 1.2551028e-34, 0.0164)
+                        point3f physics:localPos1 = (0, 0, 0)
+                        quatf physics:localRot0 = (1, 0, 0, 0)
+                        quatf physics:localRot1 = (1, 0, 0, 0)
+                        float physics:lowerLimit = -11.229973
+                        float physics:upperLimit = 92.24621
+                    }
+
+                    def "mf_medial" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (-0.00019288158, -0.000077904166, 0.022586012)
+                        float3 physics:diagonalInertia = (0.0000042873276, 0.0000036356423, 0.0000016736698)
+                        float physics:mass = 0.018463746
+                        quatf physics:principalAxes = (0.999903, -0.00028931772, 0.013923432, 0.0000040286864)
+
+                        over "Box" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                            uniform int mjc:group = 3
+                            uniform double[] mjc:solref = [0.02, 1]
+                            float dynasphere:contactGap = 0
+                            float physics:mass = 0
+                        }
+
+                        def PhysicsRevoluteJoint "mfj2" (
+                            prepend apiSchemas = ["MjcJointAPI", "DynaSphereJointAPI"]
+                        )
+                        {
+                            uniform double mjc:damping = 0.1
+                            float dynasphere:damping = 0.0017453292
+                            uniform token physics:axis = "Y"
+                            rel physics:body0 = </allegro_left/Geometry/palm/mf_base/mf_proximal>
+                            rel physics:body1 = </allegro_left/Geometry/palm/mf_base/mf_proximal/mf_medial>
+                            point3f physics:localPos0 = (3.081488e-33, -1.1101137e-33, 0.054)
+                            point3f physics:localPos1 = (0, 0, 0)
+                            quatf physics:localRot0 = (1, 0, 0, 0)
+                            quatf physics:localRot1 = (1, 0, 0, 0)
+                            float physics:lowerLimit = -9.969465
+                            float physics:upperLimit = 97.91849
+                        }
+
+                        def "mf_distal" (
+                            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                        )
+                        {
+                            point3f physics:centerOfMass = (-0.0005208062, -0.0000033249908, 0.0072512897)
+                            float3 physics:diagonalInertia = (7.9637954e-7, 7.281658e-7, 3.7775212e-7)
+                            float physics:mass = 0.007512312
+                            quatf physics:principalAxes = (0.68773526, 0.68773526, 0.16437826, -0.16437826)
+
+                            over "Box" (
+                                prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                                uniform int mjc:group = 3
+                                uniform double[] mjc:solref = [0.02, 1]
+                                float dynasphere:contactGap = 0
+                                float physics:mass = 0
+                            }
+
+                            def PhysicsRevoluteJoint "mfj3" (
+                                prepend apiSchemas = ["MjcJointAPI", "DynaSphereJointAPI"]
+                            )
+                            {
+                                uniform double mjc:damping = 0.1
+                                float dynasphere:damping = 0.0017453292
+                                uniform token physics:axis = "Y"
+                                rel physics:body0 = </allegro_left/Geometry/palm/mf_base/mf_proximal/mf_medial>
+                                rel physics:body1 = </allegro_left/Geometry/palm/mf_base/mf_proximal/mf_medial/mf_distal>
+                                point3f physics:localPos0 = (0, 1.8538126e-34, 0.0384)
+                                point3f physics:localPos1 = (0, 0, 0)
+                                quatf physics:localRot0 = (1, 0, 0, 0)
+                                quatf physics:localRot1 = (1, 0, 0, 0)
+                                float physics:lowerLimit = -13.006142
+                                float physics:upperLimit = 92.704575
+                            }
+
+                            def "mf_tip" (
+                                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                            )
+                            {
+                                point3f physics:centerOfMass = (7.276306e-12, -1.1560279e-7, 0.025402764)
+                                float3 physics:diagonalInertia = (4.5582306e-7, 4.558136e-7, 4.4955877e-7)
+                                float physics:mass = 0.0068445215
+                                quatf physics:principalAxes = (1, 0, 0, 0)
+
+                                over "Capsule" (
+                                    prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                                    uniform int mjc:group = 3
+                                    uniform double[] mjc:solref = [0.02, 1]
+                                    float dynasphere:contactGap = 0
+                                    float physics:mass = 0
+                                }
+
+                                def PhysicsFixedJoint "PhysicsFixedJoint"
+                                {
+                                    rel physics:body0 = </allegro_left/Geometry/palm/mf_base/mf_proximal/mf_medial/mf_distal>
+                                    rel physics:body1 = </allegro_left/Geometry/palm/mf_base/mf_proximal/mf_medial/mf_distal/mf_tip>
+                                    point3f physics:localPos0 = (-3.081488e-33, 1.8538126e-34, -1.3877788e-17)
+                                    point3f physics:localPos1 = (0, 0, 0)
+                                    quatf physics:localRot0 = (1, 0, 0, 0)
+                                    quatf physics:localRot1 = (1, 0, 0, 0)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            def "ff_base" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-0.00077812717, -0.000010286743, 0.008282494)
+                float3 physics:diagonalInertia = (7.653764e-7, 6.8884293e-7, 3.5504598e-7)
+                float physics:mass = 0.0072320164
+                quatf physics:principalAxes = (0.68420887, 0.68586165, -0.17507692, 0.17549984)
+
+                over "Box" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                    uniform int mjc:group = 3
+                    uniform double[] mjc:solref = [0.02, 1]
+                    float dynasphere:contactGap = 0
+                    float physics:mass = 0
+                }
+
+                def PhysicsRevoluteJoint "ffj0" (
+                    prepend apiSchemas = ["MjcJointAPI", "DynaSphereJointAPI"]
+                )
+                {
+                    uniform double mjc:damping = 0.1
+                    float dynasphere:damping = 0.0017453292
+                    uniform token physics:axis = "Z"
+                    rel physics:body0 = </allegro_left/Geometry/palm>
+                    rel physics:body1 = </allegro_left/Geometry/palm/ff_base>
+                    point3f physics:localPos0 = (0, -0.0435, -0.001542)
+                    point3f physics:localPos1 = (0, 0, 0)
+                    quatf physics:localRot0 = (0.99904823, 0.043619126, 3.307005e-18, 3.8163916e-17)
+                    quatf physics:localRot1 = (1, 0, 0, 0)
+                    float physics:lowerLimit = -26.929016
+                    float physics:upperLimit = 26.929016
+                }
+
+                def "ff_proximal" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (2.7523313e-8, -0.00009059554, 0.02699977)
+                    float3 physics:diagonalInertia = (0.000011862359, 0.000011276808, 0.0000022658685)
+                    float physics:mass = 0.027276123
+                    quatf physics:principalAxes = (1, 0, 0, 0)
+
+                    over "Box" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                        uniform int mjc:group = 3
+                        uniform double[] mjc:solref = [0.02, 1]
+                        float dynasphere:contactGap = 0
+                        float physics:mass = 0
+                    }
+
+                    def PhysicsRevoluteJoint "ffj1" (
+                        prepend apiSchemas = ["MjcJointAPI", "DynaSphereJointAPI"]
+                    )
+                    {
+                        uniform double mjc:damping = 0.1
+                        float dynasphere:damping = 0.0017453292
+                        uniform token physics:axis = "Y"
+                        rel physics:body0 = </allegro_left/Geometry/palm/ff_base>
+                        rel physics:body1 = </allegro_left/Geometry/palm/ff_base/ff_proximal>
+                        point3f physics:localPos0 = (-7.70372e-34, -6.938894e-18, 0.0164)
+                        point3f physics:localPos1 = (0, 0, 0)
+                        quatf physics:localRot0 = (1, 0, 0, 0)
+                        quatf physics:localRot1 = (1, 0, 0, 0)
+                        float physics:lowerLimit = -11.229973
+                        float physics:upperLimit = 92.24621
+                    }
+
+                    def "ff_medial" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (-0.00019288158, -0.000077904166, 0.022586012)
+                        float3 physics:diagonalInertia = (0.0000042873276, 0.0000036356423, 0.0000016736698)
+                        float physics:mass = 0.018463746
+                        quatf physics:principalAxes = (0.999903, -0.00028931772, 0.013923432, 0.0000040286864)
+
+                        over "Box" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                            uniform int mjc:group = 3
+                            uniform double[] mjc:solref = [0.02, 1]
+                            float dynasphere:contactGap = 0
+                            float physics:mass = 0
+                        }
+
+                        def PhysicsRevoluteJoint "ffj2" (
+                            prepend apiSchemas = ["MjcJointAPI", "DynaSphereJointAPI"]
+                        )
+                        {
+                            uniform double mjc:damping = 0.1
+                            float dynasphere:damping = 0.0017453292
+                            uniform token physics:axis = "Y"
+                            rel physics:body0 = </allegro_left/Geometry/palm/ff_base/ff_proximal>
+                            rel physics:body1 = </allegro_left/Geometry/palm/ff_base/ff_proximal/ff_medial>
+                            point3f physics:localPos0 = (1.540744e-33, -6.938894e-18, 0.054)
+                            point3f physics:localPos1 = (0, 0, 0)
+                            quatf physics:localRot0 = (1, 0, 0, 0)
+                            quatf physics:localRot1 = (1, 0, 0, 0)
+                            float physics:lowerLimit = -9.969465
+                            float physics:upperLimit = 97.91849
+                        }
+
+                        def "ff_distal" (
+                            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                        )
+                        {
+                            point3f physics:centerOfMass = (-0.0005208062, -0.0000033249908, 0.0072512897)
+                            float3 physics:diagonalInertia = (7.9637954e-7, 7.281658e-7, 3.7775212e-7)
+                            float physics:mass = 0.007512312
+                            quatf physics:principalAxes = (0.68773526, 0.68773526, 0.16437826, -0.16437826)
+
+                            over "Box" (
+                                prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                                uniform int mjc:group = 3
+                                uniform double[] mjc:solref = [0.02, 1]
+                                float dynasphere:contactGap = 0
+                                float physics:mass = 0
+                            }
+
+                            def PhysicsRevoluteJoint "ffj3" (
+                                prepend apiSchemas = ["MjcJointAPI", "DynaSphereJointAPI"]
+                            )
+                            {
+                                uniform double mjc:damping = 0.1
+                                float dynasphere:damping = 0.0017453292
+                                uniform token physics:axis = "Y"
+                                rel physics:body0 = </allegro_left/Geometry/palm/ff_base/ff_proximal/ff_medial>
+                                rel physics:body1 = </allegro_left/Geometry/palm/ff_base/ff_proximal/ff_medial/ff_distal>
+                                point3f physics:localPos0 = (-4.622232e-33, -6.938894e-18, 0.0384)
+                                point3f physics:localPos1 = (0, 0, 0)
+                                quatf physics:localRot0 = (1, 0, 0, 0)
+                                quatf physics:localRot1 = (1, 0, 0, 0)
+                                float physics:lowerLimit = -13.006142
+                                float physics:upperLimit = 92.704575
+                            }
+
+                            def "ff_tip" (
+                                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                            )
+                            {
+                                point3f physics:centerOfMass = (7.276306e-12, -1.1560279e-7, 0.025402764)
+                                float3 physics:diagonalInertia = (4.5582306e-7, 4.558136e-7, 4.4955877e-7)
+                                float physics:mass = 0.0068445215
+                                quatf physics:principalAxes = (1, 0, 0, 0)
+
+                                over "Capsule" (
+                                    prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                                    uniform int mjc:group = 3
+                                    uniform double[] mjc:solref = [0.02, 1]
+                                    float dynasphere:contactGap = 0
+                                    float physics:mass = 0
+                                }
+
+                                def PhysicsFixedJoint "PhysicsFixedJoint"
+                                {
+                                    rel physics:body0 = </allegro_left/Geometry/palm/ff_base/ff_proximal/ff_medial/ff_distal>
+                                    rel physics:body1 = </allegro_left/Geometry/palm/ff_base/ff_proximal/ff_medial/ff_distal/ff_tip>
+                                    point3f physics:localPos0 = (-4.622232e-33, -6.938894e-18, 0)
+                                    point3f physics:localPos1 = (0, 0, 0)
+                                    quatf physics:localRot0 = (1, 0, 0, 0)
+                                    quatf physics:localRot1 = (1, 0, 0, 0)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            def "th_base" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-0.017917829, -0.0077263676, 0.011871054)
+                float3 physics:diagonalInertia = (0.000010974182, 0.000009447706, 0.000007300594)
+                float physics:mass = 0.04008789
+                quatf physics:principalAxes = (0.04688927, 0.7014051, -0.7094709, 0.049832053)
+
+                over "Box" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                    uniform int mjc:group = 3
+                    uniform double[] mjc:solref = [0.02, 1]
+                    float dynasphere:contactGap = 0
+                    float physics:mass = 0
+                }
+
+                def PhysicsRevoluteJoint "thj0" (
+                    prepend apiSchemas = ["MjcJointAPI", "DynaSphereJointAPI"]
+                )
+                {
+                    uniform double mjc:damping = 0.1
+                    float dynasphere:damping = 0.0017453292
+                    uniform token physics:axis = "X"
+                    rel physics:body0 = </allegro_left/Geometry/palm>
+                    rel physics:body1 = </allegro_left/Geometry/palm/th_base>
+                    point3f physics:localPos0 = (-0.0182, -0.019333, -0.045987)
+                    point3f physics:localPos1 = (0, 0, 0)
+                    quatf physics:localRot0 = (0.4777141, 0.5213341, -0.5213341, 0.4777141)
+                    quatf physics:localRot1 = (1, 0, 0, 0)
+                    float physics:lowerLimit = 15.06879
+                    float physics:upperLimit = 79.98491
+                }
+
+                def "th_proximal" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (-0.00078202685, -0.000010249416, 0.008104545)
+                    float3 physics:diagonalInertia = (7.6374823e-7, 6.8739985e-7, 3.539318e-7)
+                    float physics:mass = 0.0072193122
+                    quatf physics:principalAxes = (0.683996, 0.685644, -0.1759155, 0.17633933)
+
+                    over "Box" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                        uniform int mjc:group = 3
+                        uniform double[] mjc:solref = [0.02, 1]
+                        float dynasphere:contactGap = 0
+                        float physics:mass = 0
+                    }
+
+                    def PhysicsRevoluteJoint "thj1" (
+                        prepend apiSchemas = ["MjcJointAPI", "DynaSphereJointAPI"]
+                    )
+                    {
+                        uniform double mjc:damping = 0.1
+                        float dynasphere:damping = 0.0017453292
+                        uniform token physics:axis = "Z"
+                        rel physics:body0 = </allegro_left/Geometry/palm/th_base>
+                        rel physics:body1 = </allegro_left/Geometry/palm/th_base/th_proximal>
+                        point3f physics:localPos0 = (-0.027, -0.005, 0.0399)
+                        point3f physics:localPos1 = (0, 0, 0)
+                        quatf physics:localRot0 = (0, -1, 0, 0)
+                        quatf physics:localRot1 = (0, -1, 0, 0)
+                        float physics:lowerLimit = -6.016057
+                        float physics:upperLimit = 66.634995
+                    }
+
+                    def "th_medial" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (-0.00016433628, 0.000017148155, 0.021111917)
+                        float3 physics:diagonalInertia = (0.000007527637, 0.000006583326, 0.0000021410644)
+                        float physics:mass = 0.022496473
+                        quatf physics:principalAxes = (0.9999598, 0, -0.008964237, 0)
+
+                        over "Box" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                            uniform int mjc:group = 3
+                            uniform double[] mjc:solref = [0.02, 1]
+                            float dynasphere:contactGap = 0
+                            float physics:mass = 0
+                        }
+
+                        def PhysicsRevoluteJoint "thj2" (
+                            prepend apiSchemas = ["MjcJointAPI", "DynaSphereJointAPI"]
+                        )
+                        {
+                            uniform double mjc:damping = 0.1
+                            float dynasphere:damping = 0.0017453292
+                            uniform token physics:axis = "Y"
+                            rel physics:body0 = </allegro_left/Geometry/palm/th_base/th_proximal>
+                            rel physics:body1 = </allegro_left/Geometry/palm/th_base/th_proximal/th_medial>
+                            point3f physics:localPos0 = (-1.3877788e-17, 0, 0.0177)
+                            point3f physics:localPos1 = (0, 0, 0)
+                            quatf physics:localRot0 = (1, 0, 0, 0)
+                            quatf physics:localRot1 = (1, 0, 0, 0)
+                            float physics:lowerLimit = -10.828902
+                            float physics:upperLimit = 94.19426
+                        }
+
+                        def "th_distal" (
+                            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                        )
+                        {
+                            point3f physics:centerOfMass = (8.943978e-16, 0.000003677057, 0.013075033)
+                            float3 physics:diagonalInertia = (0.000002913777, 0.0000025902032, 0.0000013565169)
+                            float physics:mass = 0.016334496
+                            quatf physics:principalAxes = (0.99999815, 0.0019454393, 0, 0)
+
+                            over "Box" (
+                                prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                                uniform int mjc:group = 3
+                                uniform double[] mjc:solref = [0.02, 1]
+                                float dynasphere:contactGap = 0
+                                float physics:mass = 0
+                            }
+
+                            def PhysicsRevoluteJoint "thj3" (
+                                prepend apiSchemas = ["MjcJointAPI", "DynaSphereJointAPI"]
+                            )
+                            {
+                                uniform double mjc:damping = 0.1
+                                float dynasphere:damping = 0.0017453292
+                                uniform token physics:axis = "Y"
+                                rel physics:body0 = </allegro_left/Geometry/palm/th_base/th_proximal/th_medial>
+                                rel physics:body1 = </allegro_left/Geometry/palm/th_base/th_proximal/th_medial/th_distal>
+                                point3f physics:localPos0 = (-1.3877788e-17, 0, 0.0514)
+                                point3f physics:localPos1 = (0, 0, 0)
+                                quatf physics:localRot0 = (1, 0, 0, 0)
+                                quatf physics:localRot1 = (1, 0, 0, 0)
+                                float physics:lowerLimit = -9.281917
+                                float physics:upperLimit = 98.49145
+                            }
+
+                            def "th_tip" (
+                                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                            )
+                            {
+                                point3f physics:centerOfMass = (7.276311e-12, -1.1560279e-7, 0.041002765)
+                                float3 physics:diagonalInertia = (4.5582306e-7, 4.558136e-7, 4.4955877e-7)
+                                float physics:mass = 0.0068445215
+                                quatf physics:principalAxes = (1, 0, 0, 0)
+
+                                over "Capsule" (
+                                    prepend apiSchemas = ["PhysicsCollisionAPI", "DynaSphereCollisionAPI", "MjcCollisionAPI", "PhysicsMassAPI", "MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding:physics = </allegro_left/Physics/PhysicsMaterial>
+                                    uniform int mjc:group = 3
+                                    uniform double[] mjc:solref = [0.02, 1]
+                                    float dynasphere:contactGap = 0
+                                    float physics:mass = 0
+                                }
+
+                                def PhysicsFixedJoint "PhysicsFixedJoint"
+                                {
+                                    rel physics:body0 = </allegro_left/Geometry/palm/th_base/th_proximal/th_medial/th_distal>
+                                    rel physics:body1 = </allegro_left/Geometry/palm/th_base/th_proximal/th_medial/th_distal/th_tip>
+                                    point3f physics:localPos0 = (0, 0, 0)
+                                    point3f physics:localPos1 = (0, 0, 0)
+                                    quatf physics:localRot0 = (1, 0, 0, 0)
+                                    quatf physics:localRot1 = (1, 0, 0, 0)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+def PhysicsScene "PhysicsScene" (
+    prepend apiSchemas = ["DynaSphereSceneAPI", "MjcSceneAPI"]
+)
+{
+    uniform token mjc:compiler:angle = "radian"
+    uniform token mjc:option:cone = "elliptic"
+    uniform double mjc:option:impratio = 10
+    uniform int dynasphere:maxSolverIterations = 100
+    uniform int dynasphere:timeStepsPerSecond = 500
+    vector3f physics:gravityDirection = (0, 0, -1)
+    float physics:gravityMagnitude = 9.81
+}
+
