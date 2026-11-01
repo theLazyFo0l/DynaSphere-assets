@@ -1,0 +1,688 @@
+#usda 1.0
+(
+    doc = """
+    DR Test Mechanism (a.k.a. DR TestMech)
+
+    A teeny-tiny toy mechanism that serves as a demonstration of all joints supported by Kamino.
+
+    Copyright (C) 2025, Disney Enterprises, Inc. All rights reserved.
+    """
+
+    defaultPrim = "DR_TestMech"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "DR_TestMech"
+{
+    def Scope "RigidBodies"
+    {
+        def Xform "base" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            customData = {
+                string uuid = "0ece88e3-361c-4282-bff0-a0b23df4369a"
+            }
+        )
+        {
+            point3f physics:centerOfMass = (0, 0, 0)
+            float3 physics:diagonalInertia = (0.00013879225, 0.00021673806, 0.0003499395)
+            float physics:mass = 0.16508174
+            quatf physics:principalAxes = (0.9967661, -0.0055305865, 0.004850645, 0.080020435)
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (-0.061502736028, 0.048778354009, 0.005522919719999976)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Scope "Geometry"
+            {
+                def Scope "Primary"
+                {
+                    def "mesh_0" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI"]
+                        customData = {
+                            string layer = "Primary"
+                            string uuid = "42d4f4f8-3385-4a74-83a0-85edbf1f7eb2"
+                        }
+                        prepend references = @Geometry/surfaces.usd@</Surfaces/mesh_42d4f4f8_3385_4a74_83a0_85edbf1f7eb2>
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+                    }
+                }
+            }
+        }
+
+        def Xform "driver" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            customData = {
+                string uuid = "7acc34e9-95b8-4096-8412-2f215c7402c9"
+            }
+        )
+        {
+            point3f physics:centerOfMass = (0, 0, 0)
+            float3 physics:diagonalInertia = (4.9461203e-8, 2.5732655e-7, 2.5880325e-7)
+            float physics:mass = 0.006098011
+            quatf physics:principalAxes = (-0.5487477, -0.035398386, 0.67001754, 0.4986977)
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (-0.11975296571200002, 0.01072729486500001, 0.041382113060999974)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Scope "Geometry"
+            {
+                def Scope "Primary"
+                {
+                    def "mesh_0" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI"]
+                        customData = {
+                            string layer = "Primary"
+                            string uuid = "b00809bc-9ac0-4f19-9b4c-902cb9e878a6"
+                        }
+                        prepend references = @Geometry/surfaces.usd@</Surfaces/mesh_b00809bc_9ac0_4f19_9b4c_902cb9e878a6>
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+                    }
+                }
+            }
+        }
+
+        def Xform "link1" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            customData = {
+                string uuid = "0867c788-2ae6-48dc-a9eb-49847b2bd114"
+            }
+        )
+        {
+            point3f physics:centerOfMass = (0, 0, 0)
+            float3 physics:diagonalInertia = (1.0768857e-8, 0.0000038709277, 0.0000038709286)
+            float physics:mass = 0.0057236957
+            quatf physics:principalAxes = (0.9542736, 0.2630884, 0.0118352715, 0.14144394)
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (-0.08378306855200002, 0.01512885585400001, 0.047550400719999976)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Scope "Geometry"
+            {
+                def Scope "Primary"
+                {
+                    def "mesh_0" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI"]
+                        customData = {
+                            string layer = "Primary"
+                            string uuid = "0b24c37b-e3a9-42ff-b70e-628374e33371"
+                        }
+                        prepend references = @Geometry/surfaces.usd@</Surfaces/mesh_0b24c37b_e3a9_42ff_b70e_628374e33371>
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+                    }
+                }
+            }
+        }
+
+        def Xform "link2" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            customData = {
+                string uuid = "394af621-d90e-4ffd-89cf-f896147ab227"
+            }
+        )
+        {
+            point3f physics:centerOfMass = (0, 0, 0)
+            float3 physics:diagonalInertia = (1.07693285e-8, 0.0000038709277, 0.000003870928)
+            float physics:mass = 0.0057236957
+            quatf physics:principalAxes = (0.52358794, 0.38010982, 0.70735765, 0.28463542)
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (-0.05389702964100001, 0.05865708922000001, 0.03966279981699997)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Scope "Geometry"
+            {
+                def Scope "Primary"
+                {
+                    def "mesh_0" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI"]
+                        customData = {
+                            string layer = "Primary"
+                            string uuid = "6f097bb6-b23a-401f-aa36-a4edc3daeb0d"
+                        }
+                        prepend references = @Geometry/surfaces.usd@</Surfaces/mesh_6f097bb6_b23a_401f_aa36_a4edc3daeb0d>
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+                    }
+                }
+            }
+        }
+
+        def Xform "link3" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            customData = {
+                string uuid = "ed16ea0c-925e-4df4-9153-f8eaa6e6e649"
+            }
+        )
+        {
+            point3f physics:centerOfMass = (0, 0, 0)
+            float3 physics:diagonalInertia = (9.079495e-9, 0.0000014197948, 0.0000014197958)
+            float physics:mass = 0.0042216945
+            quatf physics:principalAxes = (-0.5215009, -0.009767306, 0.08613473, 0.8488358)
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (-0.03639702837600001, 0.045832608632000005, 0.037831399117999986)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Scope "Geometry"
+            {
+                def Scope "Primary"
+                {
+                    def "mesh_0" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI"]
+                        customData = {
+                            string layer = "Primary"
+                            string uuid = "a87516ea-c1e5-4f93-8f57-247ec9e3e360"
+                        }
+                        prepend references = @Geometry/surfaces.usd@</Surfaces/mesh_a87516ea_c1e5_4f93_8f57_247ec9e3e360>
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+                    }
+                }
+            }
+        }
+
+        def Xform "slider" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            customData = {
+                string uuid = "b3032cad-75d6-4462-9520-9f463cd8c792"
+            }
+        )
+        {
+            point3f physics:centerOfMass = (0, 0, 0)
+            float3 physics:diagonalInertia = (6.278052e-8, 0.0000018783595, 0.000001901557)
+            float physics:mass = 0.009027479
+            quatf physics:principalAxes = (0.06492317, 0.70412, -0.06492317, -0.70412)
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (-0.047794066446000004, 0.022448488057000008, 0.03316446114899998)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Scope "Geometry"
+            {
+                def Scope "Primary"
+                {
+                    def "mesh_0" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI"]
+                        customData = {
+                            string layer = "Primary"
+                            string uuid = "57ee1f85-ae2d-4c64-ab21-ec6105b076d9"
+                        }
+                        prepend references = @Geometry/surfaces.usd@</Surfaces/mesh_57ee1f85_ae2d_4c64_ab21_ec6105b076d9>
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+                    }
+                }
+            }
+        }
+
+        def Xform "cart" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            customData = {
+                string uuid = "335b2281-75bd-409f-8503-e731590c8f34"
+            }
+        )
+        {
+            point3f physics:centerOfMass = (0, 0, 0)
+            float3 physics:diagonalInertia = (1.09349e-7, 2.4344e-7, 2.58835e-7)
+            float physics:mass = 0.0057947203
+            quatf physics:principalAxes = (-0.5, 0.5, -0.5, 0.5)
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (-0.025000000000000005, 0.068008129403, 0.02036192224199998)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Scope "Geometry"
+            {
+                def Scope "Primary"
+                {
+                    def "mesh_0" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI"]
+                        customData = {
+                            string layer = "Primary"
+                            string uuid = "7829b604-9825-40f6-afe1-bf43afc9d48d"
+                        }
+                        prepend references = @Geometry/surfaces.usd@</Surfaces/mesh_7829b604_9825_40f6_afe1_bf43afc9d48d>
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+                    }
+                }
+            }
+        }
+
+        def Xform "cartlink" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            customData = {
+                string uuid = "8bb4b07e-4cd3-4295-937e-512e2cf38c50"
+            }
+        )
+        {
+            point3f physics:centerOfMass = (0, 0, 0)
+            float3 physics:diagonalInertia = (8.218e-9, 2.978e-8, 2.978e-8)
+            float physics:mass = 0.0020677047
+            quatf physics:principalAxes = (-0.70710677, 2.3551386e-16, 0.70710677, 1.5700924e-16)
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (-0.02500000000000001, 0.06800812940300001, 0.03387274085399998)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Scope "Geometry"
+            {
+                def Scope "Primary"
+                {
+                    def "mesh_0" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI"]
+                        customData = {
+                            string layer = "Primary"
+                            string uuid = "17994783-174f-4ff6-9380-14d4086af299"
+                        }
+                        prepend references = @Geometry/surfaces.usd@</Surfaces/mesh_17994783_174f_4ff6_9380_14d4086af299>
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+                    }
+                }
+            }
+        }
+
+        def Xform "endeffector" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            customData = {
+                string uuid = "e1afbb26-23d6-47dc-858a-c625bbb698ae"
+            }
+        )
+        {
+            point3f physics:centerOfMass = (0, 0, 0)
+            float3 physics:diagonalInertia = (1.2382712e-7, 4.1298287e-7, 4.12983e-7)
+            float physics:mass = 0.009441305
+            quatf physics:principalAxes = (-0.5, 9.279176e-11, 0.70710677, 0.5)
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (-0.03109039463900001, 0.061917734764000004, 0.044613118698999976)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Scope "Geometry"
+            {
+                def Scope "Primary"
+                {
+                    def "mesh_0" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI"]
+                        customData = {
+                            string layer = "Primary"
+                            string uuid = "412e2aa8-422f-4452-8865-e44b2b54e24d"
+                        }
+                        prepend references = @Geometry/surfaces.usd@</Surfaces/mesh_412e2aa8_422f_4452_8865_e44b2b54e24d>
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+                    }
+                }
+            }
+        }
+
+        def Xform "clevis" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            customData = {
+                string uuid = "0ea7f162-6e70-4c13-9351-7b6339bc1815"
+            }
+        )
+        {
+            point3f physics:centerOfMass = (0, 0, 0)
+            float3 physics:diagonalInertia = (3.6822133e-8, 4.1937e-8, 5.9924865e-8)
+            float physics:mass = 0.0017898824
+            quatf physics:principalAxes = (0.7038407, 0.7038407, 0.06788461, 0.06788461)
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (-0.06, 0.09, 0.015571046638999966)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Scope "Geometry"
+            {
+                def Scope "Primary"
+                {
+                    def "mesh_0" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI"]
+                        customData = {
+                            string layer = "Primary"
+                            string uuid = "4df85c5b-d207-44a8-b7d9-60a1259c108d"
+                        }
+                        prepend references = @Geometry/surfaces.usd@</Surfaces/mesh_4df85c5b_d207_44a8_b7d9_60a1259c108d>
+                    )
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+                    }
+                }
+            }
+        }
+    }
+
+    def Scope "FlexibleBodies"
+    {
+    }
+
+    def Scope "Joints"
+    {
+        def PhysicsFixedJoint "base" (
+            customData = {
+                string uuid = "3e136774-2f6e-4536-8bb6-925420949d98"
+            }
+        )
+        {
+            rel physics:body1 = </DR_TestMech/RigidBodies/base>
+            point3f physics:localPos0 = (-0.061502736, 0.048778355, 0.00552292)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.5, 0.5, 0.5, 0.5)
+            quatf physics:localRot1 = (0.5, 0.5, 0.5, 0.5)
+        }
+
+        def PhysicsRevoluteJoint "motor" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular"]
+            customData = {
+                string uuid = "6df7d550-0f8f-451e-9b0c-08a26392bb8e"
+            }
+        )
+        {
+            float drive:angular:physics:maxForce = inf
+            uniform token physics:axis = "X"
+            rel physics:body0 = </DR_TestMech/RigidBodies/base>
+            rel physics:body1 = </DR_TestMech/RigidBodies/driver>
+            point3f physics:localPos0 = (-0.05571909, -0.031556528, 0.02947708)
+            point3f physics:localPos1 = (0.0025311403, 0.0064945305, -0.006382113)
+            quatf physics:localRot0 = (0.6532815, 0.6532815, -0.27059805, -0.27059805)
+            quatf physics:localRot1 = (0.6532815, 0.6532815, -0.27059805, -0.27059805)
+            float physics:lowerLimit = -3600
+            float physics:upperLimit = 3600
+        }
+
+        def PhysicsSphericalJoint "link1_1" (
+            customData = {
+                string uuid = "16feb381-3102-439c-b4bb-300cce2aa26e"
+            }
+        )
+        {
+            rel physics:body0 = </DR_TestMech/RigidBodies/driver>
+            rel physics:body1 = </DR_TestMech/RigidBodies/link1>
+            point3f physics:localPos0 = (-0.000019112227, -0.005955217, 0.0042244885)
+            point3f physics:localPos1 = (-0.03598901, -0.010356778, -0.001943799)
+            quatf physics:localRot0 = (0.70710677, 0.5, 0.5, 0)
+            quatf physics:localRot1 = (0.70710677, 0.5, 0.5, 0)
+        }
+
+        def PhysicsJoint "link1_2" (
+            prepend apiSchemas = [
+                "PhysicsLimitAPI:transX",
+                "PhysicsLimitAPI:transY",
+                "PhysicsLimitAPI:transZ",
+                "PhysicsLimitAPI:rotX",
+                "PhysicsLimitAPI:rotY",
+                "PhysicsLimitAPI:rotZ",
+            ]
+            customData = {
+                string dofs = "universal"
+                string uuid = "8a92ec0e-cd1c-4799-8734-e23989c62f32"
+            }
+        )
+        {
+            rel physics:body0 = </DR_TestMech/RigidBodies/link1>
+            rel physics:body1 = </DR_TestMech/RigidBodies/slider>
+            point3f physics:localPos0 = (0.03598901, 0.010356778, 0.0019437991)
+            point3f physics:localPos1 = (7.246e-9, 0.0030371458, 0.01632974)
+            quatf physics:localRot0 = (-0.66036534, 0.004958965, 0.7251846, -0.19493671)
+            quatf physics:localRot1 = (-0.66036534, 0.004958965, 0.7251846, -0.19493671)
+            float limit:transX:physics:low = 1
+            float limit:transX:physics:high = -1
+            float limit:transY:physics:low = 1
+            float limit:transY:physics:high = -1
+            float limit:transZ:physics:low = 1
+            float limit:transZ:physics:high = -1
+            float limit:rotX:physics:low = -180
+            float limit:rotX:physics:high = 180
+            float limit:rotY:physics:low = -180
+            float limit:rotY:physics:high = 180
+            float limit:rotZ:physics:low = 1
+            float limit:rotZ:physics:high = -1
+        }
+
+        def PhysicsSphericalJoint "link2_1" (
+            customData = {
+                string uuid = "333b8b18-3b83-4ade-a23e-156d8dc6c757"
+            }
+        )
+        {
+            rel physics:body0 = </DR_TestMech/RigidBodies/slider>
+            rel physics:body1 = </DR_TestMech/RigidBodies/link2>
+            point3f physics:localPos0 = (7.246e-9, 0.0048656906, 0.026161138)
+            point3f physics:localPos1 = (0.0061029703, -0.031342912, 0.0196628)
+            quatf physics:localRot0 = (0.5552025, 0.37635413, -0.31014013, 0.6737365)
+            quatf physics:localRot1 = (0.5552025, 0.37635413, -0.31014013, 0.6737365)
+        }
+
+        def PhysicsRevoluteJoint "link2_2" (
+            customData = {
+                string uuid = "b81a1cf5-61c7-4f22-ac5b-2d96aa5fc15e"
+            }
+        )
+        {
+            uniform token physics:axis = "X"
+            rel physics:body0 = </DR_TestMech/RigidBodies/clevis>
+            rel physics:body1 = </DR_TestMech/RigidBodies/link2>
+            point3f physics:localPos0 = (0, 0, 0.0044289534)
+            point3f physics:localPos1 = (-0.0061029703, 0.031342912, -0.0196628)
+            quatf physics:localRot0 = (-0.046820354, -0.08381622, 0.8689911, 0.48542476)
+            quatf physics:localRot1 = (-0.046820354, -0.08381622, 0.8689911, 0.48542476)
+        }
+
+        def PhysicsJoint "link3_1" (
+            prepend apiSchemas = [
+                "PhysicsLimitAPI:transX",
+                "PhysicsLimitAPI:transY",
+                "PhysicsLimitAPI:transZ",
+                "PhysicsLimitAPI:rotX",
+                "PhysicsLimitAPI:rotY",
+                "PhysicsLimitAPI:rotZ",
+            ]
+            customData = {
+                string dofs = "universal"
+                string uuid = "783f3717-2c2d-46e0-9606-0588045e4d2f"
+            }
+        )
+        {
+            rel physics:body0 = </DR_TestMech/RigidBodies/slider>
+            rel physics:body1 = </DR_TestMech/RigidBodies/link3>
+            point3f physics:localPos0 = (7.246e-9, 0.0012086012, 0.0064983387)
+            point3f physics:localPos1 = (-0.011397031, -0.022175519, 0.0018314008)
+            quatf physics:localRot0 = (0.73026824, 0.6280843, -0.26245406, -0.05776094)
+            quatf physics:localRot1 = (0.73026824, 0.6280843, -0.26245406, -0.05776094)
+            float limit:transX:physics:low = 1
+            float limit:transX:physics:high = -1
+            float limit:transY:physics:low = 1
+            float limit:transY:physics:high = -1
+            float limit:transZ:physics:low = 1
+            float limit:transZ:physics:high = -1
+            float limit:rotX:physics:low = -180
+            float limit:rotX:physics:high = 180
+            float limit:rotY:physics:low = -180
+            float limit:rotY:physics:high = 180
+            float limit:rotZ:physics:low = 1
+            float limit:rotZ:physics:high = -1
+        }
+
+        def PhysicsSphericalJoint "link3_2" (
+            customData = {
+                string uuid = "7196b40f-b1f0-4f49-9c76-e0dbdcd0715c"
+            }
+        )
+        {
+            rel physics:body0 = </DR_TestMech/RigidBodies/link3>
+            rel physics:body1 = </DR_TestMech/RigidBodies/cartlink>
+            point3f physics:localPos0 = (0.011397028, 0.02217552, -0.0018313992)
+            point3f physics:localPos1 = (0, 0, 0.002127259)
+            quatf physics:localRot0 = (-0.55722076, -0.25853962, 0.6297057, -0.47553447)
+            quatf physics:localRot1 = (-0.55722076, -0.25853962, 0.6297057, -0.47553447)
+        }
+
+        def PhysicsJoint "base_slider" (
+            prepend apiSchemas = [
+                "PhysicsLimitAPI:transX",
+                "PhysicsLimitAPI:transY",
+                "PhysicsLimitAPI:transZ",
+                "PhysicsLimitAPI:rotX",
+                "PhysicsLimitAPI:rotY",
+                "PhysicsLimitAPI:rotZ",
+            ]
+            customData = {
+                string dofs = "cylindrical"
+                string uuid = "9d54166d-5944-4ea1-85a0-0f25fb69e51e"
+            }
+        )
+        {
+            rel physics:body0 = </DR_TestMech/RigidBodies/base>
+            rel physics:body1 = </DR_TestMech/RigidBodies/slider>
+            point3f physics:localPos0 = (0.013708677, -0.028778354, 0.014477081)
+            point3f physics:localPos1 = (7.246e-9, -0.002448488, -0.013164462)
+            quatf physics:localRot0 = (0.7690431, 0.639197, -8.5380934e-17, 7.096512e-17)
+            quatf physics:localRot1 = (0.7690431, 0.639197, -8.5380934e-17, 7.096512e-17)
+            float limit:transX:physics:low = -inf
+            float limit:transX:physics:high = inf
+            float limit:transY:physics:low = 1
+            float limit:transY:physics:high = -1
+            float limit:transZ:physics:low = 1
+            float limit:transZ:physics:high = -1
+            float limit:rotX:physics:low = -180
+            float limit:rotX:physics:high = 180
+            float limit:rotY:physics:low = 1
+            float limit:rotY:physics:high = -1
+            float limit:rotZ:physics:low = 1
+            float limit:rotZ:physics:high = -1
+        }
+
+        def PhysicsRevoluteJoint "base_clevis" (
+            customData = {
+                string uuid = "a8c394ce-7b0f-482a-8fdf-f8ee67243f9d"
+            }
+        )
+        {
+            uniform token physics:axis = "X"
+            rel physics:body0 = </DR_TestMech/RigidBodies/base>
+            rel physics:body1 = </DR_TestMech/RigidBodies/clevis>
+            point3f physics:localPos0 = (0.001502736, 0.041221645, 0.0074770804)
+            point3f physics:localPos1 = (0, 0, -0.0025710466)
+            quatf physics:localRot0 = (-0.54569376, 0.44968694, 0.54569376, 0.44968694)
+            quatf physics:localRot1 = (-0.54569376, 0.44968694, 0.54569376, 0.44968694)
+        }
+
+        def PhysicsPrismaticJoint "base_cart" (
+            customData = {
+                string uuid = "19890f00-f152-42e9-8061-32ac1ed18eee"
+            }
+        )
+        {
+            uniform token physics:axis = "X"
+            rel physics:body0 = </DR_TestMech/RigidBodies/base>
+            rel physics:body1 = </DR_TestMech/RigidBodies/cart>
+            point3f physics:localPos0 = (0.036502738, 0.019229775, 0.01047708)
+            point3f physics:localPos1 = (0, 0, -0.0043619224)
+            quatf physics:localRot0 = (0.70710677, -1.5700924e-16, 0, 0.70710677)
+            quatf physics:localRot1 = (0.70710677, -1.5700924e-16, 0, 0.70710677)
+        }
+
+        def PhysicsFixedJoint "cart_cartlink" (
+            customData = {
+                string uuid = "ad1589d8-d985-4dc9-8217-fde16bf459fd"
+            }
+        )
+        {
+            rel physics:body0 = </DR_TestMech/RigidBodies/cart>
+            rel physics:body1 = </DR_TestMech/RigidBodies/cartlink>
+            point3f physics:localPos0 = (0, 0, 0.005638078)
+            point3f physics:localPos1 = (3.469447e-18, 0, -0.007872741)
+            quatf physics:localRot0 = (0.70710677, -1.5700924e-16, 0, 0.70710677)
+            quatf physics:localRot1 = (0.70710677, -1.5700924e-16, 0, 0.70710677)
+        }
+
+        def PhysicsSphericalJoint "cartlink_ee" (
+            customData = {
+                string uuid = "b2355763-641b-459c-a8d2-0e1b3a0bf98e"
+            }
+        )
+        {
+            rel physics:body0 = </DR_TestMech/RigidBodies/cartlink>
+            rel physics:body1 = </DR_TestMech/RigidBodies/endeffector>
+            point3f physics:localPos0 = (0, 0, 0.002127259)
+            point3f physics:localPos1 = (0.0060903947, 0.0060903947, -0.008613119)
+            quatf physics:localRot0 = (-0.55722076, -0.25853962, 0.6297057, -0.47553447)
+            quatf physics:localRot1 = (-0.55722076, -0.25853962, 0.6297057, -0.47553447)
+        }
+
+        def PhysicsJoint "driver_ee" (
+            prepend apiSchemas = [
+                "PhysicsLimitAPI:transX",
+                "PhysicsLimitAPI:transY",
+                "PhysicsLimitAPI:transZ",
+                "PhysicsLimitAPI:rotX",
+                "PhysicsLimitAPI:rotY",
+                "PhysicsLimitAPI:rotZ",
+            ]
+            customData = {
+                string dofs = "cartesian"
+                string uuid = "b983b33a-2836-4e03-98fd-37f18c861b3c"
+            }
+        )
+        {
+            rel physics:body0 = </DR_TestMech/RigidBodies/driver>
+            rel physics:body1 = </DR_TestMech/RigidBodies/endeffector>
+            point3f physics:localPos0 = (-0.000019112227, -0.005955217, 0.0042244885)
+            point3f physics:localPos1 = (-0.08868168, -0.057145655, 0.000993483)
+            quatf physics:localRot0 = (0.70710677, 0.5, 0.5, 0)
+            quatf physics:localRot1 = (0.70710677, 0.5, 0.5, 0)
+            float limit:transX:physics:low = -inf
+            float limit:transX:physics:high = inf
+            float limit:transY:physics:low = -inf
+            float limit:transY:physics:high = inf
+            float limit:transZ:physics:low = -inf
+            float limit:transZ:physics:high = inf
+            float limit:rotX:physics:low = 1
+            float limit:rotX:physics:high = -1
+            float limit:rotY:physics:low = 1
+            float limit:rotY:physics:high = -1
+            float limit:rotZ:physics:low = 1
+            float limit:rotZ:physics:high = -1
+        }
+    }
+
+    def Scope "Materials"
+    {
+    }
+
+    def Scope "Collisions"
+    {
+        def PhysicsCollisionGroup "DefaultGroup"
+        {
+            prepend rel collection:colliders:includes = </DR_TestMech>
+        }
+    }
+}
+
