@@ -1,6 +1,6 @@
 # DR Legs walk policy configuration
 #
-# Task constants for the walk RL policy. The Newton example
+# Task constants for the walk RL policy. The DynaSphere example
 # (example_rl_drlegs.py) loads this file and uses the values below.
 # Hardcoded defaults in the example match these values, so removing
 # or commenting out a key simply falls back to the built-in default.
