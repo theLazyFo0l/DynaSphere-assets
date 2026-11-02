@@ -2,7 +2,7 @@
 
 This asset was created from the packaged
 [`asRoBallet.xml`](../mjcf/asRoBallet.xml) with
-[mujoco-usd-converter](https://github.com/dynasphere-physics/mujoco-usd-converter)
+[mujoco-usd-converter](https://github.com/newton-physics/mujoco-usd-converter)
 0.5.0 and its locked dependencies. The packaged MJCF is based on the asRoBallet
 source at
 [this commit](https://github.com/asRoBallet/asRoBallet_mujoco/blob/0747bf245081f892fc12b723a0fe78581f121c61/robots/mjcf/asRoBallet.xml),

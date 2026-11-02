@@ -1,6 +1,6 @@
 # About Structured USD Robots
 
-This asset was created with the [mujoco-usd-converter](https://github.com/dynasphere-physics/mujoco-usd-converter), having converted the source MJCF from the MuJoCo Menagerie as of [this commit](https://github.com/google-deepmind/mujoco_menagerie/blob/da76818e269b82289eba39808e2fb91d679d6994/seeed_rebot_devarm/seeed_rebot_devarm.xml). The conversion results are unchanged here.
+This asset was created with the [mujoco-usd-converter](https://github.com/newton-physics/mujoco-usd-converter), having converted the source MJCF from the MuJoCo Menagerie as of [this commit](https://github.com/google-deepmind/mujoco_menagerie/blob/da76818e269b82289eba39808e2fb91d679d6994/seeed_rebot_devarm/seeed_rebot_devarm.xml). The conversion results are unchanged here.
 
 That commit is [mujoco_menagerie#300](https://github.com/google-deepmind/mujoco_menagerie/pull/300) as merged to `main`, so the source is pinned to an immutable SHA rather than to a branch.
 

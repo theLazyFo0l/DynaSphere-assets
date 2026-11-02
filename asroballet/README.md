@@ -27,7 +27,7 @@ body, and `mjcf/scene_floating_ball.xml` loads that variant with the same scene
 configuration.
 
 The structured USD model was created with the
-[mujoco-usd-converter](https://github.com/dynasphere-physics/mujoco-usd-converter).
+[mujoco-usd-converter](https://github.com/newton-physics/mujoco-usd-converter).
 For conversion details and the main asset entrypoint, see the
 [usd_structured README](usd_structured/README.md).
 

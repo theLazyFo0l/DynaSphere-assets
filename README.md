@@ -1,20 +1,18 @@
 # DynaSphere Assets
 
-This repository holds a collection of permissively licensed assets for use with DynaSphere.
+This repository stores simulation models, textures, datasets and policy files
+used by DynaSphere examples. It is maintained by USTB_Ai3D.
+Contact: [ustb_ai3d@126.com](mailto:ustb_ai3d@126.com).
 
-Contributors should store possibly large simulation assets such as models, textures, datasets, or pre-trained policies in this repository to keep code-development repositories small.
+## Contributing Assets
 
-## Contributing to Assets
+- Discuss proposed assets in [GitHub Issues](https://github.com/theLazyFo0l/DynaSphere-assets/issues).
+- Include the asset origin, applicable license and distribution permissions.
+- Follow the existing directory layout, with separate folders for model formats,
+  geometry, textures and policies where appropriate.
+- Include a README with supported DynaSphere versions and validation instructions.
+- Open corresponding code and asset pull requests when an example needs both.
+- Have the repository maintainer review the contribution before merging.
 
-* Before proposing to add any assets to the DynaSphere project, make sure that the assets are properly licensed for use and distribution. If you are unsure about the license, open a new [issue](https://github.com/dynasphere-physics/dynasphere-assets/issues).
-* In addition to the pull request to the code repository that relies on the new assets, open a corresponding pull request in this assets repository.
-* Follow the file structure of existing assets, i.e. the parent folder should be `manufacturer_robot_model`, and contain
-    * appropriately named subfolders that contain the different asset types and formats
-    * a LICENSE file with an appropriate, permissive license, see first point above
-    * a README.md describing the asset and its origins, and provides a changelog, if applicable
-* Have a signed CLA on file (see [Legal Requirements](https://github.com/dynasphere-physics/dynasphere-governance/blob/main/CONTRIBUTING.md#legal-requirements)).
-* Have the pull request approved by a [Project Member](https://github.com/dynasphere-physics/dynasphere-governance/blob/main/CONTRIBUTING.md#project-members) and merged into the asset repository.
-
-## General Guidelines and Legal
-
-Please refer to [the contribution guidelines](https://github.com/dynasphere-physics/dynasphere-governance/blob/main/CONTRIBUTING.md) in the `dynasphere-governance` repository for general information, project membership, and legal requirements for making contributions to DynaSphere.
+See the main project's [contribution guide](https://github.com/theLazyFo0l/DynaSphere/blob/main/CONTRIBUTING.md).
+Report security issues privately to [ustb_ai3d@126.com](mailto:ustb_ai3d@126.com).

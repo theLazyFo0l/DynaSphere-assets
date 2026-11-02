@@ -12,7 +12,7 @@ The subfolders contain:
 
 ### USD (Structured)
 
-The structured USD model was created with the [mujoco-usd-converter](https://github.com/dynasphere-physics/mujoco-usd-converter), converted from the MuJoCo Menagerie MJCF source. For details, see the [usd_structured README](usd_structured/README.md).
+The structured USD model was created with the [mujoco-usd-converter](https://github.com/newton-physics/mujoco-usd-converter), converted from the MuJoCo Menagerie MJCF source. For details, see the [usd_structured README](usd_structured/README.md).
 
 ## License
 

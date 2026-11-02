@@ -15,7 +15,7 @@ The subfolders contain:
 
 The URDF is the vendor description from [Seeed-Projects/reBot-Isaacsim](https://github.com/Seeed-Projects/reBot-Isaacsim), carrying the full link inertia tensors. Its actuator limits were verified against the physical arm: the effort limit of every joint matches the torque limit read live from the motor firmware over CAN (motors 1-3 are RobStride RS-06 at 36 Nm, motors 4-7 are RS-00 at 14 Nm), and the gripper's limits are the motor's own envelope reflected through the transmission.
 
-Convert it with [urdf-usd-converter](https://github.com/dynasphere-physics/urdf-usd-converter):
+Convert it with [urdf-usd-converter](https://github.com/newton-physics/urdf-usd-converter):
 
 ```
 urdf_usd_converter urdf/seeed_rebot_devarm.urdf <out_dir>
@@ -25,7 +25,7 @@ URDF cannot express actuator gains or the gripper coupling, so a USD converted f
 
 ### USD (Structured)
 
-The structured USD model was created with the [mujoco-usd-converter](https://github.com/dynasphere-physics/mujoco-usd-converter), converted from the MuJoCo Menagerie MJCF source. For details, see the [usd_structured README](usd_structured/README.md).
+The structured USD model was created with the [mujoco-usd-converter](https://github.com/newton-physics/mujoco-usd-converter), converted from the MuJoCo Menagerie MJCF source. For details, see the [usd_structured README](usd_structured/README.md).
 
 ## Gripper
 
